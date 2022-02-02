@@ -1,3 +1,4 @@
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -66,13 +67,12 @@ if __name__ == "__main__":
   print('Parsing top 10 videos')
   videos_data = [parse_video(video) for video in videos[:10]]
 
-  '''
+
   print('Saving the data to a CSV')
   videos_df = pd.DataFrame(videos_data)
   print(videos_df)
   videos_df.to_csv('trending.csv', index = None)
 
-  '''
 
   
 
